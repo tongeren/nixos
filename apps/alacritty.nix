@@ -1,0 +1,103 @@
+{ pkgs, ... }:
+
+{
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      terminal.shell = {
+        args = [ ];
+        program = "${pkgs.tmux}/bin/tmux";  
+      };
+      keyboard.bindings = [
+        {
+          action = "ResetFontSize";
+          key = "Key0";
+          mods = "Control";
+        }
+        {
+          action = "IncreaseFontSize";
+          key = "Equals";
+          mods = "Control";
+        }      
+        {
+          action = "DecreaseFontSize";
+          key = "Minus";
+          mods = "Control";
+        }
+        {
+          action = "SpawnNewInstance";
+          key = "N";
+          mods = "Shift|Control";
+        }
+        {
+          action = "IncreaseFontSize";
+          key = "Equals";
+          mods = "Control";
+        }
+        {
+          chars = "t\r";
+          key = "F";
+          mods = "Control|Shift";
+        }
+      ];
+      selection = {
+        save_to_clipboard = true;
+        semantic_escape_chars = ",│`|:\"' ()[]{}<>";
+      };
+      colors.bright = {
+        black = "0x6f6f6f";
+        blue = "0xc2e3ff";
+        cyan = "0xc0e9f8";
+        green = "0xd6fcba";
+        magenta = "0xffc6ff";
+        red = "0xfe978b";
+        white = "0xffffff";
+        yellow = "0xfffed5";
+      };
+      colors.cursor = {
+        background = "0xf0f0f0";
+        cursor = "#ECEFF4";
+        foreground = "0x26282a";
+        text = "#3B4252";
+      };
+      colors.normal = {
+        black = "0x26282a";
+        blue = "0x8bbce5";
+        cyan = "0xa2e1f8";
+        green = "0xb4fb73";
+        magenta = "0xffb2fe";
+        red = "0xff8878";
+        white = "0xf1f1f1";
+        yellow = "0xfffcb7";
+      };
+      colors.primary = {
+        background = "0x000000";
+        foreground = "0xeaeaea";
+      };
+      font.size = 10.0;
+      font.bold = {
+        family = "FiraCode Nerd Font";
+        style = "Bold";
+      }; 
+      font.bold_italic = {
+        family = "FiraCode Nerd Font";
+        style = "Bold Italic";
+      };
+      font.italic = {
+        family = "FiraCode Nerd Font";
+        style = "Italic";
+      };
+      font.normal = {
+        family = "FiraCode Nerd Font";
+        style = "Regular";
+      };
+      window = {
+        opacity = 0.95;
+      };
+      window.padding = {
+        x = 5;
+        y = 5;
+      };  
+    };
+  };
+}

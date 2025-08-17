@@ -1,0 +1,20 @@
+{ config, lib, ... }:
+
+{
+  programs.lazygit = {
+    enable = true;
+    settings = ''
+      gui:
+        nerdFontsVersion: "3"
+      git:
+        disableForcePushing: true
+        parseEmoji: true
+      paging:
+        colorArg: always
+        pager: delta --paging=never --hyperlinks --line-numbers
+      os:
+        Open: 'nvim {{filename}}'
+        OS.Edit,EditAtLine: '{{editor}} +{{line}} -- {{filename}}'
+    '';
+  };
+}
