@@ -15,6 +15,10 @@
       };
     };
     shellAliases = {
+      # nscript
+      nscript = "/nix/store/sy76h3c0y6c2ga8di8jfpd053r4194dg-nscript_standalone-0.1.0/bin/nscript_standalone";
+      # codium
+      code = "codium";
       # ls, the common ones I use exa for ls
       ls = "ls --color=auto";
       ll = "ls -l";
@@ -94,6 +98,8 @@
       setopt auto_pushd
       setopt pushd_ignore_dups
       setopt pushdminus
+
+      export NSCRIPT_PATH="$HOME/nscript"
     ''; # Content to be added to ~/.zshrc.
     enableCompletion = true; # Enable zsh completion.
     autosuggestion.enable = true;

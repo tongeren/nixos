@@ -36,6 +36,8 @@
     # utils
     eza # A modern replacement for ls
     bat # A cat(1) clone with syntax highlighting and Git integration
+    direnv # Shell extension that manages your environment
+    nix-direnv # Fast, persistent use_nix implementation for direnv
 
     gtypist
 
@@ -44,7 +46,7 @@
     ytdownloader
     video-downloader 
     vlc
-    zsh-powerlevel10k
+    
   ];
   
   # This value determines the home Manager release that your
@@ -55,7 +57,7 @@
   # You can update home Manager without changing this value. See
   # the home Manager release notes for a list of state version
   # changes in each release.
-  home.stateVersion =  "24.11";
+  home.stateVersion =  "25.05";
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
 }  

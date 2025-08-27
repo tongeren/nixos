@@ -11,6 +11,7 @@
       extensions = with pkgs.vscode-extensions; [
     	  bbenoist.nix # Nix language support 
         rust-lang.rust-analyzer # Rust language support
+        arrterian.nix-env-selector # Allows switch environment for Visual Studio Code and extensions based on Nix config file.
         # vscod evim.vim # vim emulator
         # asvetliakov.vscode-neovim # Vim-mode for VS Code using embedded Neovim 
         # -> error: [Failed to start nvim] command 'type' already exists
@@ -20,4 +21,3 @@
     };
   };
 }    
-
