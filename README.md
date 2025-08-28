@@ -69,3 +69,10 @@ sudo chmod 600 ddclient_opendns.conf
 ```
 
 Now we can refer to this file in `opendns.nix`.
+
+### Hybrid graphics with PRIME
+
+Determine the PCI bus IDs of the two GPUs:
+```
+nix shell nixpkgs#pciutils -c lspci -d ::03xx
+```

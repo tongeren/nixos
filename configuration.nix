@@ -12,6 +12,7 @@
       ./intel-kaby-lake.nix
       ./nvidia-maxwell.nix
       ./vulkan.nix
+      ./prime.nix
       ./opendns.nix
     ];
 
